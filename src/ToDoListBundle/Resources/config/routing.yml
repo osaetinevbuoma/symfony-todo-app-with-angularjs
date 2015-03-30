@@ -1,0 +1,26 @@
+to_do_list_homepage:
+    path:     /
+    defaults: { _controller: ToDoListBundle:Default:index }
+
+listTodos:
+    path:       /list
+    defaults:   { _controller: ToDoListBundle:Default:listTodos }
+
+saveTodo:
+    path:       /save
+    defaults:   { _controller: ToDoListBundle:Default:saveTodo }
+    methods:    [POST]
+
+editTodo:
+    path:       /edit/{id}
+    defaults:   { _controller: ToDoListBundle:Default:editTodo }
+
+updateTodo:
+    path:       /update
+    defaults:   { _controller: ToDoListBundle:Default:updateTodo }
+    methods:    [PUT]
+
+deleteTodo:
+    path:       /delete/{id}
+    defaults:   { _controller: ToDoListBundle:Default:deleteTodo }
+    methods:    [DELETE]
